@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styling */
+:root {
+  --background: #f5f5f5;
+  --foreground: #1e1e1e;
+  --primary: #1a73e8; /* A deep blue */
+  --secondary: #e2e8f0; /* Light grey */
+  --accent: #3b82f6; /* Lighter blue for accents */
+}
+.about-page {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Improved About Box Style */
+.about-page div {
+  max-width: 500px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2); /* Glass effect */
+  backdrop-filter: blur(15px); /* Stronger blur effect */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1e1e1e;
+    --foreground: #f5f5f5;
+    --primary: #3b82f6;
+    --secondary: #2d2d2d;
+  }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #222;
+  position: relative;
+  overflow: hidden; /* Ensures the waves don’t overflow */
+  overflow-y: auto;
+}
+
+/* Create a wavy effect using pseudo-elements */
+body::before {
+  content: "";
+  position: absolute;
+  top: -100px; /* Move wave higher */
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #89cff0; /* Adjust the color as needed */
+  clip-path: ellipse(70% 40% at 50% 30%);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -100px; /* Move wave lower */
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #76b5c5;
+  clip-path: ellipse(70% 40% at 50% 70%);
+  z-index: -1;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  font-size: 1.1rem;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8); /* Light semi-transparent */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Navbar Link Spacing and Hover */
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Consistent padding */
+  transition: color 0.3s ease;
+  color: #167162;
+}
+
+nav a:hover {
+  color: #021f1b;
+  text-decoration: none;
+}
+
+/* Align navbar content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Call to Action Button */
+button {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--secondary);
+  border-radius: 6px;
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #3f4b49;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  height: 10px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-container p {
+  color: white;
+}
+/* img {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+} */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensures full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-page {
+  min-height: 100vh;
+  padding-top: 550;
+  padding-bottom: 530;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.projects-page .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default: One column */
+  gap: 20px;
+  max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  .projects-page .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  }
+}
+.skills-page {
+  background: linear-gradient(135deg, #048c75, #d9e2ed);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-page div {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.skills-page h1,
+.skills-page p {
+  text-align: center;
+  width: 100%;
+}
+.contact-page {
+  /* background: linear-gradient(to bottom, #1a73e8, #dfe6e9); */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
