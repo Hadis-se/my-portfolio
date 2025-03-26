@@ -56,7 +56,7 @@ export default function Contact() {
               Contact Me
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300 text-center mb-6">
-              I'd love to hear from you! Fill out the form below to get in
+              I&apos;d love to hear from you! Fill out the form below to get in
               touch.
             </p>
           </>
