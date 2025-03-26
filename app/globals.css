@@ -214,8 +214,8 @@ section {
 
 .projects-page {
   min-height: 100vh;
-  padding-top: 550;
-  padding-bottom: 530;
+  padding-top: 35rem;
+  padding-bottom: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,7 +223,7 @@ section {
 }
 .projects-page .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Default: One column */
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   max-width: 1200px;
 }

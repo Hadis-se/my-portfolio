@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section className="projects-page min-h-screen pt-32 pb-20 px-6 bg-white">
+    <section className="projects-page min-h-screen pt-24 pb-24 px-6 bg-white">
       {/* Page Title */}
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
         Featured Projects
