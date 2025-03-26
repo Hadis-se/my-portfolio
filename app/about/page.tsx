@@ -17,7 +17,7 @@ export default function About() {
         <p className="text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
           Hi, I&apos;m<span className="font-semibold text-primary">Hadis</span>! I&apos;m a passionate web developer who loves
           creating elegant and user-friendly web applications. My journey
-          started with frontend development, and over time, I’ve expanded my
+          started with frontend development, and over time, I&apos;ve expanded my
           skills into full-stack development.
         </p>
       </div>
