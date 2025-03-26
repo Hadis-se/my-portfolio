@@ -100,7 +100,7 @@ export default function Contact() {
           </form>
         ) : (
           <p className="text-2xl font-semibold text-green-500 bg-white/60 dark:bg-gray-800/60 p-6 rounded-lg shadow-md text-center">
-            ✅ Thank you for your message! I'll get back to you soon.
+            ✅ Thank you for your message! I&apos;ll get back to you soon.
           </p>
         )}
       </div>
