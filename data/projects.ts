@@ -44,7 +44,7 @@ export const projects = [
     id: 6,
     title: "Portfolio Website",
     description: "A modern personal portfolio built with Next.js and Tailwind.",
-    link: "https://your-portfolio.com",
+    link: "https://hadissedaghat.com",
     image: "/portfolio.png",
   },
 ];
