@@ -3,7 +3,7 @@ export const skills = [
     { name: "React", icon: "/react.svg" },
     { name: "ReactNative", icon: "/react.svg" },
     { name: "TypeScript", icon: "/typescript.svg" },
-    { name: "Tailwind CSS", icon: "/tailwindcss.svg" },
+    { name: "TailwindCSS", icon: "/tailwindcss.svg" },
     { name: "Prisma", icon: "/prisma.svg" },
     { name: "Node.js", icon: "/nodejs.svg" },
     { name: "Git", icon: "/git.svg" },
