@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hadis | Web Developer Portfolio",
-  description: "Portfolio of Hadis - A passionate web developer creating modern, responsive web applications.",
+  description:
+    "Portfolio of Hadis - A passionate web developer creating modern, responsive web applications.",
   keywords: ["Hadis", "Web Developer", "Next.js", "React", "Portfolio"],
   openGraph: {
     title: "Hadis | Web Developer Portfolio",
@@ -36,15 +37,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <Navbar />
-          <main className="pt-20 container mx-auto">{children}</main>
-          <Footer />
+        <Navbar />
+        <main className="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

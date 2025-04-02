@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
-      <div className="container mx-auto flex justify-between items-center py-2 px-6">
+      <div className="nav-container mx-auto flex justify-between items-center py-2 px-6">
         <div className="flex items-center space-x-6">
           {[
             { href: "/", label: "Home" },
